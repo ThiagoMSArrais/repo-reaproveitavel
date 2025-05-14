@@ -15,3 +15,5 @@ jobs:
   CD:
     needs: [CI]
     uses: ThiagoMSArrais/repo-reaproveitavel/.github/workflows/cd.yml@main
+    with:
+      ambiente: producao
