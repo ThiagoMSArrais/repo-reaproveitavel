@@ -14,5 +14,5 @@ jobs:
         run: echo "Publicação da Release final"
   CD:
     needs: [CI]
-    uses: ThiagoMSArrais/repo-reaproveitavel/.github/workflows/cd.yml@main
+    uses: ThiagoMSArrais/repo-deploy/.github/workflows/deploy.yml@main
     secrets: inherit
