@@ -2,10 +2,8 @@ name: Deploy fake
 
 on:
     workflow_call:
-        inputs:
+        secrets:
             ambiente:
-                type: string
-                default: "desenvolvimento"
                 required: true
                 description: "Ambiente onde vai ser feito o deploy"
 jobs:
@@ -14,4 +12,5 @@ jobs:
         steps:
             - name: Deploy no ambiente
               run: echo "Executando o deploy no ambiente de ${{ inputs.ambiente }}"
-      
+            - name: CURL Deploy no ambiente
+              run: "curl -X POST https://webhook.site/19996667-edcb-462c-92f2-a90d449cfd7b -d '{ ambiente: ${{ secrets.ambiente }}}"
