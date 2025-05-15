@@ -15,5 +15,4 @@ jobs:
   CD:
     needs: [CI]
     uses: ThiagoMSArrais/repo-reaproveitavel/.github/workflows/cd.yml@main
-    secrets:
-      ambiente: ${{ secrets.AMBIENTE_PARAMETRO }}
+    secrets: inherit
