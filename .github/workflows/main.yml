@@ -15,4 +15,5 @@ jobs:
   CD:
     needs: [CI]
     uses: ThiagoMSArrais/repo-deploy/.github/workflows/deploy.yml@main
-    secrets: inherit
+    with:
+      ambiente: desenvolvimento
